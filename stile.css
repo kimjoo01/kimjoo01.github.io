@@ -1,0 +1,1947 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+
+/* general setings */
+
+.inactive {
+    display: none !important;
+}
+.difuse {
+    opacity: 0;
+}
+.bloquear a{
+    border-color: rgba(126, 220, 185, 1) !important; 
+    color: rgb(126, 220, 185) !important;
+}
+.elemento_estudiosH2_visible{
+    animation-name: estudios_main;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.elemento_flechaprev_visible {
+    animation-name: flecha_prev_main !important;
+    animation-duration: 1s !important;
+    animation-fill-mode: forwards !important;
+}
+.elemento_flechanext_visible {
+    animation-name: flecha_next_main !important;
+    animation-duration: 1s !important;
+    animation-fill-mode: forwards !important;
+}
+.elemento_swipe_visible {
+    animation-name: swipe_main !important;
+    animation-duration: 1s !important;
+    animation-fill-mode: forwards !important;
+}
+.elemento_navSwipe_visible {
+    animation-name: nav_swipe_main !important;
+    animation-duration: 1s !important;
+    animation-fill-mode: forwards !important;
+}
+.seleccionado{
+    filter: none !important;
+    border: 3px solid rgb(126, 220, 185) !important;
+    transform: scale(1.2) !important;
+}
+
+/* header */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle, #303942, #08090a);
+}
+
+header{
+    position: relative;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+}
+
+.logo{
+    display: flex;
+    height: 10rem;
+    width: 10rem;
+    margin: 0 3rem;
+    align-self: center;
+    transition: opacity 0.5s ease-in-out;
+    cursor: pointer;
+}
+.barra_navegacion{
+    display: flex;
+    width: 90rem;
+}
+.barra_navegacion ul {
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+    width: 100%;
+    justify-content: space-between;
+    align-self: center;
+    margin: 0 5rem;
+}
+.barra_navegacion ul a{
+    display: flex;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    border: 0.4rem solid;
+    border-color: rgba(0, 0, 0, 0);
+    padding: 0.5rem 1rem;
+    border-radius: 3rem;
+    transition: color 0.4s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+}
+.menu_mobile_icon{
+    display: none;
+    height: 5rem;
+    width: 5rem;
+    align-self: center;
+    margin: 0 4rem;
+    cursor: pointer;
+}
+
+.barra_navegacion ul a:hover{
+    border-color: rgba(126, 220, 185, 1); 
+    color: rgb(126, 220, 185);
+}
+
+/* menu mobile */
+
+.menu_mobile {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    place-items: center;
+    flex-direction: column;
+    z-index: 4;
+    background: radial-gradient(circle, #4a5866, #16191b);
+}
+.logo_menu_mobile_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo_menu_mobile{
+    display: flex;
+    height: 30rem;
+    width: 30rem;
+    padding-top: 2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    animation-name: logo_mobile;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+}
+.nombre {
+    position: relative;
+    bottom: 5%;
+    font-size: 4.5rem;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #79d2bc, #5fb9ee);
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 0;
+    visibility: hidden;
+    animation-name: nombre;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+.barra_navegacion_mobile {
+    margin-top: 3rem;
+    height: 30vh;
+    display: flex;
+}
+.barra_navegacion_mobile ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: space-between;
+}
+.barra_navegacion_mobile ul li {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 3rem;
+    border-radius: 10rem;
+    background-color: #e9631c;
+    cursor: pointer;
+    box-shadow: 
+        0 0 5px #eb925a, 
+        0 0 10px #eb925a, 
+        0 0 15px #eb925a, 
+        inset 0 0 4px rgba(250, 250, 250, 0.3),
+        inset 0 0 8px rgba(250, 250, 250, 0.3), 
+        inset 0 0 12px rgba(250, 250, 250, 0.3);
+}
+.barra_navegacion_mobile ul li a{
+    font-size: 3rem;
+    color: white;
+}
+.inicio_mobile{
+    opacity: 0;
+    visibility: hidden;
+    animation-name: boton_1_3;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+}
+.Portafolio_mobile{
+    opacity: 0;
+    visibility: hidden;
+    animation-name: boton_2;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+.Redes_sociales_mobile{
+    opacity: 0;
+    visibility: hidden;
+    animation-name: boton_1_3;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+/* inicio */
+
+.inicio_main {
+    display: flex;
+    place-items: center;
+    width: 100%;
+    height: 80vh;
+    justify-content: space-around;
+}
+.texto_presentacion {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    z-index: 3;
+}
+.texto_presentacion h1 {
+    width: 50rem;
+    font-size: 5rem;
+    color: #e9631c;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    animation-name: aparecer_nombre;
+    animation-duration: 2s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+}
+.texto_presentacion p {
+    color: white;
+    font-size: 4rem;
+    font-weight: 300;
+    width: 40rem;
+    opacity: 0;
+    visibility: hidden;
+    animation-name: aparecer_frase;
+    animation-duration: 2s;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+}
+.contenedor_foto{
+    position: relative;
+    height: 100vh;
+    width: 100rem;
+    right: 7%;
+    bottom: 0;
+}
+.contenedor_foto img:nth-last-child(2){
+    position: absolute;
+    width: 103rem;
+    left: 0;
+    bottom: 0%;
+    z-index: 2;
+}
+.fondo {
+    position: absolute;
+    width: 170rem;
+    bottom: 0%;
+    right: -45%;
+    filter: brightness(1.5);
+    filter: saturate(1.2);
+    filter: contrast(1.5);
+    z-index: 1;
+}
+.contenedor_frase{
+    display: flex;
+    position: absolute;
+    top: 25%;
+    right: 8%;
+    z-index: 3;
+}
+.contenedor_comillas{
+    display: flex;
+}
+.comillas{
+    height: auto;
+    display: flex;
+    font-size: 10rem;
+    color: white;
+    margin-right: 1.5rem;
+    animation-name: aparecer_Comillas;
+    animation-duration: 0.6s;
+}
+.contenedor_frase_cita{
+    width: 30rem;
+}
+.frase {
+    font-size: 1.5rem;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    animation-name: aparecer_frase;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.cita{
+    color: #e9631c;
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    animation-name: aparecer_cita;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.contenedor_logos {
+    display: flex;
+    margin: 2rem 0;
+    z-index: 3;
+}
+.contenedor_logos img {
+    width: 10rem;
+    margin: 0 1rem;
+    padding: 1.5rem;
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    border: 0.3rem solid rgba(0, 0, 0, 0);
+    border-radius: 2rem;
+    opacity: 0;
+    visibility: hidden;
+}
+.logo_html{
+    position: relative;
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+}
+.logo_maya{
+    position: relative;
+    animation-fill-mode: forwards;
+    animation-name: aparecer;
+    animation-duration: 1s;
+}
+.logo_css{
+    position: relative;
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+}
+.logo_js{
+    position: relative;
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+}
+
+.contenedor_logos img:hover{
+    transform: scale(1.3);
+}
+.logo_html:hover {
+    border-color: rgba(240, 101, 41, 1);
+}
+.logo_maya:hover {
+    border-color: rgba(76, 190, 192, 1);
+}
+.logo_css:hover {
+    border-color: rgba(41, 101, 240, 1);
+}
+.logo_js:hover {
+    border-color: rgba(254, 217, 62, 1);
+}
+
+/* descripcion */
+
+.sobre_mi {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+}
+.descripcion{
+    display: flex;
+    width: 100%;
+    height: 85rem;
+    padding-top: 5rem;
+    place-content: center;
+    justify-content: space-between;
+    background-image: url(./recursos/fondo_geometrico_Mesa\ de\ trabajo\ 1\ copia.svg);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0);
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    animation-name: fondo;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.contenedor_foto_portada{
+    margin-top: 30rem;
+    margin-right: 6rem;
+    display: flex;
+    width: 50rem;
+    height: 50rem;
+    position: relative;
+}
+.foto_portada{
+    display: flex;
+    width: 78rem;
+    height: auto;
+    border-radius: 50%;
+    object-fit: contain;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    animation-name: img_main;
+    animation-duration: 0.8s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.estilizador {
+    width: 95rem;
+    height: 95rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    animation-name: estilizador_main;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+.Descripcion_inicio {
+    display: flex;
+    flex-direction: column;
+    width: 85rem;
+    margin-left: 15rem;
+    margin-top: 2rem;
+}
+.Descripcion_inicio h2 {
+    width: 60rem;
+    font-size: 6rem;
+    color: #e9631c;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    animation-name: nombre_main;
+    animation-duration: 1s;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+}
+.Descripcion_inicio p {
+    margin-top: 5rem;
+    font-size: 3.2rem;
+    color: white;
+    font-weight:600;
+    text-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    animation-name: descripcion_main;
+    animation-duration: 1s;
+    animation-delay: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+.estudios {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    height: 87vh;
+}
+.estudios h2 {
+    display: grid;
+    font-size: 7rem;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+    color: rgba(76, 190, 192, 1);
+    text-align: center;
+    text-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+}
+.swiper {
+    width: 90%;
+    height: auto;
+    padding-top: 10px !important;
+    padding-bottom: 15px !important;
+    opacity: 0;
+    visibility: hidden;
+}
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 400px !important;
+    height: auto;
+}
+.tarjetas_estudio {
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    height: auto;
+    margin: 0;
+    cursor: default;
+}
+.tarjetas_estudio img {
+    width: 40rem;
+    height: auto;
+    border-radius: 3rem 3rem 0 0;
+}
+.especificacion {
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    height: 23rem;
+    background-color: #19425f;
+    padding-top: 2rem;
+    border-radius: 0 0 3rem 3rem ;
+    justify-content: space-between;
+}
+.especificacion h3 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 0 2rem;
+}
+.especificacion p {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: gainsboro;
+    text-align: center;
+    padding: 2rem 0;
+}
+.swiper-pagination {
+    position: relative !important;
+    margin-top: 5px;
+}
+.swiper-pagination-bullet {
+    background-color: rgba(76, 190, 192, 1) !important;
+}
+.swiper-button-prev {
+    transform: translate3d(-100px, 0, 0);
+    opacity: 0;
+    visibility: hidden;
+}
+.swiper-button-next {
+    transform: translate3d(100px, 0, 0);
+    opacity: 0;
+    visibility: hidden;
+}
+.swiper_mobile {
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    width: 400px;
+    perspective: 1200px;
+    transform-style: preserve-3d;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.portafolio_main{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 600px);
+    place-content: center;
+    padding: 80px 0;
+}
+.portafolio_3D {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    animation-name: Tarjetas_portafolio;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+
+}
+.decorativo_1{
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+}
+.decorativo_2{
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+}
+.foto_portafolio3D {
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+}
+.titulo_portafolio3D{
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+}
+.logo_portafolio{
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+}
+atropos-component {
+    display: block;
+}
+atropos-component .atropos-inner {
+    border-radius: 4rem;
+}
+atropos-component img {
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    height: 110%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    display: block;
+    z-index: 1;
+    transform-style: preserve-3d;
+    pointer-events: none;
+    max-width: none;
+}
+atropos-component img.atropos-spacer {
+    position: relative;
+    height: auto;
+    left: 0;
+    top: 0;
+}
+atropos-component .atropos-shadow {
+    filter: blur(50px);
+    opacity: .25;
+}
+atropos-component .atropos-active .atropos-shadow {
+    opacity: 1 !important;
+}
+.portafolio_Video{
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    animation-name: Tarjetas_portafolio;
+    animation-duration: 1s;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+}
+.portafolio_Prog{
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    animation-name: Tarjetas_portafolio;
+    animation-duration: 1s;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+}
+
+.cont{
+    height: auto;
+    position: relative;
+}
+
+.portafolio_wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 325px);
+    gap: 26px;
+    place-content: center;
+    padding: 40px 0;
+}
+.carta_portafolio{
+    position: relative;
+    width: 325px;
+    height: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+.imagen_portafolio{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.imagen_portafolio::before{
+    content: '';
+    position: absolute;
+    bottom: -45%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.imagen_portafolio img {
+    object-fit: cover;
+    width: 325px;
+    height: 450px;
+    transition: 0.6s;
+}
+.descripcion_portafolio{
+    position: absolute;
+    bottom: -200%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 15px 15px 20px;
+    background: #000a;
+    backdrop-filter: blur(16px) saturate(128%);
+    transition: 0.6s;
+    color: #fff;
+    z-index: 1;
+}
+.carta_portafolio:hover .descripcion_portafolio{
+    bottom: 0;
+}
+.carta_portafolio:hover .imagen_portafolio img{
+    transform: scale(1.1);
+}
+.titulo_descripcion_portafolio{
+    font-size: 28px;
+    font-weight: bold;
+}
+.logos_descripcion_portafolio_contenedor{
+    display: flex;
+}
+.logo_portafolio_wrapper{
+    margin: 20px 10px;
+    width: 40px;
+    height: auto;
+}
+.parrafo_descripcion_portafolio{
+    font-size: 18px;
+}
+
+
+.portafolio_detalle_container {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    z-index: 2;
+}
+.portafolio_detalle{
+    position:fixed;
+    display: flex;
+    width: 1100px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    overflow: hidden;
+    z-index: 3;
+}
+.portafolio_detalle_img{
+    width: 450px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+.portafolio_detalle_img img:nth-child(1){
+    width: 450px;
+    height: 500px;
+    object-fit: cover;
+    transition: 0.6s;
+}
+.play_btn{
+    position: absolute;
+    width: 200px;
+    height: auto;
+    right: 28%;
+    top: 32%;
+    transition: 0.6s;
+    filter: drop-shadow(0 0 40px rgba(0,0,0,0.8));
+}
+.plus_btn{
+    position: absolute;
+    width: 80px;
+    height: auto;
+    right: 10%;
+    top: 5%;
+    transition: 0.6s;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+.portafolio_detalle_seccion_2{
+    background-color: #16191b;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 650px;
+    height: 100%;
+}
+.close_icon_portafolio{
+    position: absolute;
+    width: 35px;
+    cursor: pointer;
+    right: 40px;
+    top: 30px;
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.6));
+}
+.titulo_descripcion_portafolio_detalle{
+    color: white;
+    font-size: 60px;
+}
+.logos_descripcion_portafolio_contenedor_detalle{
+    margin-top: 10px;
+    width: 60px;
+    display: flex;
+}
+.parrafo_descripcion_portafolio_detalle{
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.seleccionador_imagen_container{
+    display: flex;
+    height: 20%;
+    margin-top: 25px;
+}
+.seleccionador_imagen_container img{
+    width: 25%;
+    height: 100%;
+    margin: 0 20px;
+    border-radius: 10px;
+    object-fit: cover;
+    filter: grayscale();
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.seleccionador_imagen_container img:hover{
+    filter: none;
+    border: 3px solid rgb(126, 220, 185);
+    transform: scale(1.2);
+}
+.portafolio_detalle_img:hover .play_btn{
+    transform: scale(1.3);
+}
+.portafolio_detalle_img:hover .plus_btn{
+    transform: scale(1.2);
+}
+
+/* redes sociales */
+
+.Redes_sociales_main{
+    display: flex;
+    place-content: center;
+}
+
+.logo_redes{
+    display: flex;
+    width: 700px;
+    height: auto;
+    visibility: hidden;
+    animation-name: logo_redes_sociales;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.ruleta_contenedor{
+    display: flex;
+    height: 90vh;
+    align-items: center;
+}
+.seccion_1{
+    display: flex;
+    width: 500px;
+    height: auto;
+    flex-direction: column;
+    margin-left: 40px;
+}
+.seccion_2{
+    display: flex;
+    width: 500px;
+    height: auto;
+    flex-direction: column;
+    margin-left: 40px;
+}
+
+#facebook {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+    visibility: hidden;
+    animation-name: redes_sociales;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+}
+#instagram {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+    visibility: hidden;
+    animation-name: redes_sociales;
+    animation-duration: 1s;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+}
+#linkedin {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+    visibility: hidden;
+    animation-name: redes_sociales;
+    animation-duration: 1s;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+}
+#github {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+    visibility: hidden;
+    animation-name: redes_sociales;
+    animation-duration: 1s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+#facebook:hover{
+    transform: scale(1.2);
+}
+#instagram:hover{
+    transform: scale(1.2);
+}
+#linkedin:hover{
+    transform: scale(1.2);
+}
+#github:hover{
+    transform: scale(1.2);
+}
+
+@media (max-width: 1700px){
+    .texto_presentacion {
+        position: absolute;
+        top: 15%;
+        left: 3%;
+        z-index: 3;
+    }
+    .contenedor_frase{
+        top: 15%;
+        right: 2%;
+    }
+    .contenedor_foto_portada {
+        margin-top: 32rem;
+        margin-right: 1.8rem;
+    }
+    .foto_portada{
+        width: 70rem;
+    }
+    .estilizador{
+        width: 85rem;
+    }
+    .Descripcion_inicio{
+        width: 80rem;
+    }
+    .swiper {
+        width: 95%;
+    }
+
+    .portafolio_main{
+        grid-template-columns: repeat(auto-fill, 600px);
+        padding: 70px 0;
+    }
+
+    .ruleta_contenedor{
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 50px;
+    }
+    #instagram {
+        animation-delay: 0.4s;
+    }
+    #linkedin {
+        animation-delay: 0.6s;
+    }
+    #github {
+        animation-delay: 0.8s;
+    }
+}
+
+@media (max-width: 1567px){
+    .inicio_main {
+        display: flex;
+        place-items: center;
+        width: 100%;
+        height: 80vh;
+        justify-content: space-around;
+    }
+    .texto_presentacion{
+        top: 15%;
+        left: 5%;
+    }
+    .contenedor_logos{
+        bottom: 43%;
+        left: 3%;
+    }
+    .contenedor_logos img{
+        width: 9rem;
+        margin: 0 0.5rem;
+        padding: 1.3rem;
+    }
+    .contenedor_foto{
+        width: 86rem;
+        height: 100vh;
+        bottom: 0%;
+    }
+    .contenedor_foto img:nth-last-child(2){
+        width: 90rem;
+        bottom: 0%;
+        left: 0;
+    }
+    .fondo{
+        width: 140rem;
+        bottom: 0%;
+        right: -38%;
+    }
+    .contenedor_frase{
+        top: 15%;
+        right: 2%;
+    }
+
+    .contenedor_foto_portada {
+        margin-top: 36rem;
+        margin-right: -2rem;
+    }
+    .foto_portada{
+        width: 60rem;
+    }
+    .estilizador{
+        width: 75rem;
+    }
+    .Descripcion_inicio{
+        width: 75rem;
+        margin-left: 10rem;
+    }
+    .Descripcion_inicio h2{
+        width: 45rem;
+        font-size: 5rem;
+    }
+    .Descripcion_inicio p{
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 1366px){
+
+    .texto_presentacion{
+        top: 15%;
+        left: 5%;
+    }
+    .texto_presentacion h1{
+        width: 40rem;
+        font-size: 3.8rem;
+    }
+    .texto_presentacion p {
+        font-size: 2.8rem;
+    }
+    .contenedor_logos{
+        bottom: 43%;
+        left: 3%;
+    }
+    .contenedor_logos img{
+        width: 8rem;
+        margin: 0 0.5rem;
+        padding: 1.3rem;
+    }
+    .contenedor_foto{
+        height: 100vh;
+        bottom: 0%;
+    }
+    .contenedor_foto img:nth-last-child(2){
+        width: 75rem;
+        bottom: 0%;
+        left: 8.5%;
+    }
+    .fondo{
+        width: 120rem;
+        bottom: 0%;
+        right: -28%;
+    }
+    .contenedor_frase{
+        top: 15%;
+        right: 2%;
+    }
+
+    .descripcion{
+        height: 100rem;
+    }
+    .contenedor_foto_portada {
+        margin-top: 50rem;
+        margin-right: -4rem;
+    }
+    .foto_portada{
+        width: 60rem;
+    }
+    .estilizador{
+        width: 75rem;
+    }
+    .Descripcion_inicio{
+        width: 55rem;
+        margin-left: 7rem;
+    }
+    .Descripcion_inicio h2{
+        width: 45rem;
+        font-size: 5rem;
+    }
+    .Descripcion_inicio p{
+        font-size: 3rem;
+    }
+
+    .logo_redes{
+        width: 500px;
+    }
+    .seccion_1{
+        width: 450px;
+    }
+    .seccion_2{
+        width: 450px;
+    }
+}
+
+@media (max-width: 1150px){
+
+    .portafolio_detalle{
+        flex-direction: column;
+        width: 400px;
+        height: 800px;
+    }
+    .portafolio_detalle_img{
+        width: 400px;
+        height: 550px;
+    }
+    .portafolio_detalle_img img:nth-child(1){
+        width: 400px;
+        height: 400px;
+    }
+    .play_btn{
+        width: 150px;
+        right: 28%;
+        top: 32%;
+    }
+    .plus_btn{
+        width: 50px;
+        height: auto;
+        right: 80%;
+        top: 5%;
+        transition: 0.6s;
+        filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+    }
+    .portafolio_detalle_seccion_2{
+        padding-left: 30px;
+        padding-right: 30px;
+        width: 400px;
+        height: 100%;
+    }
+    .titulo_descripcion_portafolio_detalle{
+        font-size: 40px;
+        margin-top: 10px;
+    }
+    .logos_descripcion_portafolio_contenedor_detalle{
+        margin-top: 4px;
+        width: 60px;
+    }
+    .parrafo_descripcion_portafolio_detalle{
+        font-size: 16px;
+        margin-top: 5px;
+    }
+    .seleccionador_imagen_container img{
+        width: 25%;
+        height: 70%;
+        margin: 0 15px;
+        border-radius: 10px;
+    }
+
+}
+
+@media (min-width: 1100px){
+    .menu_mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 1100px){
+    .menu_mobile_icon {
+        display: flex;
+    }
+    .barra_navegacion{
+        display: none;
+    }
+    .logo {
+        height: 6rem;
+        width: 6rem;
+    }
+    .menu_mobile {
+        display: flex;
+    }
+
+    .descripcion{
+        height: 100rem;
+    }
+    .contenedor_foto_portada {
+        margin-top: 55rem;
+        margin-right: -4rem;
+    }
+    .foto_portada{
+        width: 50rem;
+    }
+    .estilizador{
+        width: 65rem;
+    }
+    .Descripcion_inicio{
+        width: 80rem;
+        margin-left: 6rem;
+    }
+    .Descripcion_inicio h2{
+        width: 45rem;
+        font-size: 5rem;
+    }
+    .Descripcion_inicio p{
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 1030px) {
+    .inicio_main {
+        flex-direction: column;
+        justify-content: space-between;
+        height: auto;
+    }
+    .texto_presentacion{
+        display: flex;
+        flex-direction: column;
+        position: static;
+        top: 12%;
+        left: 25%;
+        order: 1;
+    }
+    .texto_presentacion h1{
+        width: 40rem;
+        font-size: 4.5rem;
+        text-align: center;
+    }
+    .texto_presentacion p {
+        font-size: 3.5rem;
+        text-align: center;
+    }
+    .contenedor_logos{
+        bottom: 43%;
+        left: 3%;
+        justify-content: center;
+    }
+    .contenedor_logos img{
+        width: 9rem;
+        margin: 0 0.5rem;
+        padding: 1.3rem;
+    }
+    .contenedor_foto{
+        display: flex;
+        position: relative;
+        height: 55rem;
+        order: 3;
+        left: 7%;
+    }
+    .contenedor_foto img:nth-last-child(2){
+        width: 60rem;
+        left: 6%;
+    }
+    .fondo{
+        width: 93rem;
+        bottom: 0%;
+        right: 2%;
+    }
+    .contenedor_frase{
+        position: static;
+        margin-top: 4rem;
+        margin-left: 3rem;
+        order: 2;
+    }
+    .contenedor_frase_cita{
+        width: 60%;
+    }
+    .frase {
+        font-size: 2.5rem;
+    }
+    .cita {
+        font-size: 2.5rem;
+    }
+
+   .Descripcion_inicio{
+        width: 65rem;
+   }
+   .Descripcion_inicio p{
+        font-size: 2.8rem;
+    }
+    .Descripcion_inicio{
+        width: 65rem;
+    }
+
+    .Redes_sociales_main{
+        flex-direction: column;
+    }
+    .logo_redes{
+        align-self: center;
+    }
+}
+
+@media (max-width: 790px){
+    .inicio_main {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 120vh;
+        overflow-x: hidden;
+    }
+    .contenedor_foto{
+        display: flex;
+        position: relative;
+        height: 55rem;
+        order: 3;
+        left: 18%;
+    }
+    .contenedor_foto img:nth-last-child(2){
+        width: 50rem;
+        left: 3%;
+    }
+    .fondo{
+        width: 80rem;
+        bottom: 0%;
+        right: 18%;
+    }
+
+    .descripcion{
+        height: 115rem;
+    }
+    .contenedor_foto_portada {
+        position: relative;
+        margin-top: 77rem;
+        right: 20rem;
+    }
+    .foto_portada{
+        width: 50rem;
+    }
+    .estilizador{
+        width: 65rem;
+    }
+    .Descripcion_inicio{
+        width: 45rem;
+        margin-left: 4rem;
+    }
+    .Descripcion_inicio h2{
+        text-align: center;
+        width: 45rem;
+        font-size: 5rem;
+    }
+    .Descripcion_inicio p{
+        margin-top: 3rem;
+        font-size: 2.3rem;
+    }
+    
+    .estudios {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        height: 78vh;
+    }
+    .estudios h2{
+        font-size: 5rem;
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+    }
+}
+
+@media (max-width: 640px){
+    .inicio_main {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 90vh;
+    }
+    .texto_presentacion{
+        display: flex;
+        flex-direction: column;
+        position: static;
+        order: 1;
+    }
+    .texto_presentacion h1{
+        width: 40rem;
+        font-size: 4.1rem;
+        text-align: center;
+    }
+    .texto_presentacion p {
+        font-size: 3.1rem;
+        text-align: center;
+    }
+    .contenedor_logos{
+        justify-content: center;
+    }
+    .contenedor_logos img{
+        width: 8rem;
+        margin: 0 0.4rem;
+        padding: 1.1rem;
+    }
+    .contenedor_foto{
+        display: flex;
+        position: relative;
+        height: 30rem;
+        order: 3;
+        left: 29%;
+    }
+    .contenedor_foto img:nth-last-child(2){
+        width: 30rem;
+        left: 15%;
+    }
+    .fondo{
+        width: 50rem;
+        bottom: 0%;
+        right: 35.3%;
+    }
+    .contenedor_frase{
+        position: static;
+        margin-top: 4rem;
+        margin-left: 3rem;
+        order: 2;
+    }
+    .contenedor_frase_cita{
+        width: 60%;
+    }
+    .frase {
+        font-size: 2rem;
+    }
+    .cita {
+        font-size: 2rem;
+    }
+    .swiper {
+        display: none !important;
+    }
+    .swiper_mobile {
+        display: flex;
+    }
+    .swiper-pagination {
+        position: absolute !important;
+        transform: translate3d(0, 50px, 0) !important;
+    }
+
+    .portafolio_main{
+        grid-template-columns: repeat(auto-fill, 500px);
+        padding: 50px 0;
+    }
+
+    .logo_redes{
+        width: 400px;
+    }
+    .ruleta_contenedor{
+        justify-content: start;
+        height: 75vh;
+    }
+    .seccion_1{
+        width: 400px;
+    }
+    .seccion_2{
+        width: 400px;
+    }
+    
+}
+
+@media (max-width: 540px){
+    .inicio_main {
+        flex-direction: column;
+        justify-content: space-between;
+        height: auto;
+    }
+
+    .descripcion{
+        height: 95rem;
+    }
+    .contenedor_foto_portada {
+        position: relative;
+        margin-top: 55rem;
+        right: 16rem;
+    }
+    .foto_portada{
+        width: 40rem;
+    }
+    .estilizador{
+        width: 55rem;
+    }
+    .Descripcion_inicio{
+        width: 35rem;
+        margin-left: 2rem;
+    }
+    .Descripcion_inicio h2 {
+        width: 35rem;
+        font-size: 3.3rem;
+    }
+    .Descripcion_inicio p{
+        margin-top: 2rem;
+        font-size: 1.9rem;
+    }
+    .estudios{
+        height: 70vh;
+    }
+    .tarjetas_estudio {
+        width: 350px;
+    }
+    .tarjetas_estudio img{
+        width: 350px;
+    }
+    .especificacion{
+        width: 350px;
+        height: 200px;
+    }
+    .especificacion h3{
+        font-size: 25px;
+    }
+
+    .swiper_mobile{
+        width: 350px;
+    }
+    .swiper-slide {
+        width: 350px !important;
+    }
+
+    .portafolio_main{
+        grid-template-columns: repeat(auto-fill, 400px);
+        padding: 40px 0;
+    }
+
+    .logo_redes{
+        width: 300px;
+    }
+    .ruleta_contenedor{
+        justify-content: start;
+        height: 60vh;
+    }
+    .seccion_1{
+        width: 300px;
+    }
+    .seccion_2{
+        width: 300px;
+    }
+
+    .portafolio_detalle{
+        flex-direction: column;
+        width: 330px;
+        height: 590px;
+        top: 55%;
+    }
+    .portafolio_detalle_img{
+        width: 330px;
+        height: 450px;
+    }
+    .portafolio_detalle_img img:nth-child(1){
+        width: 330px;
+        height: 250px;
+    }
+    .play_btn{
+        width: 100px;
+        right: 36%;
+        top: 32%;
+    }
+    .plus_btn{
+        width: 40px;
+        height: auto;
+        right: 84%;
+        top: 8%;
+        transition: 0.6s;
+        filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+    }
+    .portafolio_detalle_seccion_2{
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 330px;
+        height: 100%;
+    }
+    .titulo_descripcion_portafolio_detalle{
+        font-size: 30px;
+        margin-top: 5px;
+    }
+    .logos_descripcion_portafolio_contenedor_detalle{
+        margin-top: 0;
+        width: 50px;
+    }
+    .parrafo_descripcion_portafolio_detalle{
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    .seleccionador_imagen_container img{
+        width: 25%;
+        height: 70%;
+        margin: 0 15px;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 400px){
+    .inicio_main {
+        flex-direction: column;
+        justify-content: space-between;
+        height: auto;
+    }
+    .texto_presentacion{
+        display: flex;
+        flex-direction: column;
+        position: static;
+        align-items: center;
+        order: 1;
+    }
+    .texto_presentacion h1{
+        width: 250px;
+        font-size: 25px;
+        text-align: center;
+    }
+    .texto_presentacion p {
+        font-size: 25px;
+        text-align: center;
+    }
+    .contenedor_logos{
+        justify-content: center;
+    }
+    .contenedor_logos img{
+        width: 7rem;
+        margin: 0 0.4rem;
+        padding: 1.1rem;
+    }
+    .contenedor_frase{
+        position: static;
+        margin-top: 0;
+        margin-left: 3rem;
+        order: 2;
+    }
+    .contenedor_frase_cita{
+        width: 60%;
+    }
+    .frase {
+        font-size: 1.8rem;
+    }
+    .cita {
+        font-size: 1.8rem;
+    }
+    .contenedor_foto{
+        display: flex;
+        position: relative;
+        height: 20rem;
+        width: 60vw;
+        order: 3;
+        left: 0;
+    }
+    .contenedor_foto img:nth-last-child(2){
+        width: 22rem;
+        left: 0;
+    }
+    .fondo{
+        width: 34rem;
+        bottom: 0%;
+        right: 0;
+        left: -20%;
+    }
+
+    .menu_mobile{
+        height: auto;
+    }
+    .logo_menu_mobile{
+        width: 15rem;
+        height: auto;
+    }
+    .nombre{
+        font-size: 3rem;
+    }
+    .barra_navegacion_mobile{
+        height: 30vh;
+        margin-bottom: 50px;
+    }
+    .barra_navegacion_mobile ul li a{
+        font-size: 2rem;
+    }
+
+    .Descripcion_inicio{
+        width: 32rem;
+        margin-left: 2rem;
+    }
+    .Descripcion_inicio p{
+        margin-top: 2rem;
+        font-size: 1.8rem;
+    }
+    .Descripcion_inicio h2 {
+        width: 32rem;
+        font-size: 3.3rem;
+    }
+
+    .portafolio_main{
+        grid-template-columns: repeat(auto-fill, 310px);
+        padding: 30px 0;
+    }
+}
+
+/* animaciones main */
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        top: 25px;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+        visibility: visible;
+    }
+}
+@keyframes aparecer_Comillas {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+        visibility: visible;
+    }
+}
+@keyframes aparecer_frase {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes aparecer_cita {
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes aparecer_nombre {
+    0%{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* animaciones  menu mobile*/
+
+@keyframes boton_1_3 {
+    0%{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes boton_2 {
+    0%{
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes logo_mobile {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes nombre {
+    0%{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* animaciones inicio */
+
+@keyframes fondo {
+    0%{ 
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes nombre_main {
+    0%{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes descripcion_main {
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes estilizador_main {
+    0%{
+        opacity: 0;
+        transform: rotate(280deg);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes img_main {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes estudios_main {
+    0%{ 
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes flecha_prev_main {
+    0%{ 
+        opacity: 0 ;
+        transform: translateX(10px);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes flecha_next_main {
+    0%{ 
+        opacity: 0 ;
+        transform: translateX(-10px);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes swipe_main {
+    0%{ 
+        opacity: 0 ;
+        transform: translateY(60px);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes nav_swipe_main {
+    0%{ 
+        opacity: 0 ;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(50px);
+    }
+}
+
+/*  animaciones portafolio */
+
+@keyframes Tarjetas_portafolio {
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* animaciones redes */
+
+@keyframes logo_redes_sociales {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes redes_sociales {
+    0%{
+        opacity: 0;
+        top: 20px;
+    }
+    100%{
+        opacity: 1;
+        top: 0;
+        visibility: visible;
+    }
+}
